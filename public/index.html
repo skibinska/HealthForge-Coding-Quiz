@@ -67,6 +67,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
   <script src="./scripts/grid.js"></script>
   <script src="./helpers/format-date.helper.js"></script>
+  <script src="./helpers/capitalize-first-letter.helper.js"></script>
 
   <script id="patientsTable" type="text/x-handlebars-template">
 
@@ -87,27 +88,27 @@
 
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h2 class="modal-title">Patient: {{ prefix }} {{ firstName }} {{ lastName }} </h2>
+            <h2 class="modal-title">{{ prefix }} {{ firstName }} {{ lastName }} </h2>
           </div>
 
           <div class="modal-body">
             <ul class="list-group"><b>Identifiers: </b>
               {{#each identifiers }}
-              <li class="list-group-item">Usage: {{usage}}</li>
-              <li class="list-group-item">ID: {{value}}</li>
-              <li class="list-group-item">Code system: {{codeSystem}}</li>
+              <li class="list-group-item">Usage: {{ usage }}</li>
+              <li class="list-group-item">ID: {{ value }}</li>
+              <li class="list-group-item">Code system: {{ codeSystem }}</li>
               {{/each}}
             </ul>
             <ul class="list-group"><b>Adress: </b>
               {{#each addresses }}
-              <li class="list-group-item">Country: {{country}}</li>
-              <li class="list-group-item">Zip Code: {{zipCode}}</li>
-              <li class="list-group-item">Street: {{line1}}, {{line2}}</li>
+              <li class="list-group-item">Country: {{ country }}</li>
+              <li class="list-group-item">Zip Code: {{ zipCode }}</li>
+              <li class="list-group-item">Street: {{ line1 }}, {{ line2 }}</li>
               {{/each}}
             </ul>
             <ul class="list-group"><b>Phone number: </b>
               {{#each telecoms }}
-              <li class="list-group-item">{{usage}}: {{value}}</li>
+              <li class="list-group-item">{{ capitalizeFirstLetter usage }}: {{ value }}</li>
               {{/each}}
             </ul>
           </div>

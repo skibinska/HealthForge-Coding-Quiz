@@ -65,8 +65,6 @@
     var source = document.getElementById('patientsTable').innerHTML;
     var template = Handlebars.compile(source);
     var output = template(patient);
-    //
-    console.log(output, 'output from createPatientHTML' );
     return output;
   }
 
