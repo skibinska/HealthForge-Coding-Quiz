@@ -17,6 +17,7 @@ Current tech stack:
 - HTML5, Sass
 - Bootstrap
 - vanilla JavaScript
+- Handlebars.js
 
 ## Setup
 
