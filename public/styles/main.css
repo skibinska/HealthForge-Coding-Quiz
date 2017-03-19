@@ -5852,10 +5852,10 @@ button.close {
   font-size: 1.7rem;
   border-bottom: 1px solid #eee; }
 
-.hidden {
-  display: none; }
-
-.details__info {
-  display: table-row; }
+.modal {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem; }
+  .modal li:hover {
+    background-color: #eee; }
 
 /*# sourceMappingURL=main.css.map */

@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./styles/main.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Health Forge Coding Quiz</title>
 </head>
 <body>
@@ -50,7 +51,6 @@
         <div class="table__header">Gender</div>
         <div class="table__header">Date of Birth</div>
         <div class="table__header">Date of Death</div>
-        <div class="table__header">Zip code</div>
         <div class="table__header">Details</div>
       </div>
     </div>
@@ -64,7 +64,65 @@
   src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
   integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
   crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
   <script src="./scripts/grid.js"></script>
+  <script src="./helpers/format-date.helper.js"></script>
+  <script src="./helpers/capitalize-first-letter.helper.js"></script>
+
+  <script id="patientsTable" type="text/x-handlebars-template">
+
+    <div class="table__row result">
+      <div class="table__cell"> {{ firstName }} </div>
+      <div class="table__cell"> {{ lastName }} </div>
+      <div class="table__cell"> {{ gender }} </div>
+      <div class="table__cell"> {{ formatDate dateOfBirth }} </div>
+      <div class="table__cell"> {{ formatDate dateOfDeath }} </div>
+      <div class="table__cell">
+        <button class="btn btn-default btn--detail" data-toggle="modal" data-target="#modal">Details</button>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">{{ prefix }} {{ firstName }} {{ lastName }} </h2>
+          </div>
+
+          <div class="modal-body">
+            <ul class="list-group"><b>Identifiers: </b>
+              {{#each identifiers }}
+              <li class="list-group-item">Usage: {{ usage }}</li>
+              <li class="list-group-item">ID: {{ value }}</li>
+              <li class="list-group-item">Code system: {{ codeSystem }}</li>
+              {{/each}}
+            </ul>
+            <ul class="list-group"><b>Adress: </b>
+              {{#each addresses }}
+              <li class="list-group-item">Country: {{ country }}</li>
+              <li class="list-group-item">Zip Code: {{ zipCode }}</li>
+              <li class="list-group-item">Street: {{ line1 }}, {{ line2 }}</li>
+              {{/each}}
+            </ul>
+            <ul class="list-group"><b>Phone number: </b>
+              {{#each telecoms }}
+              <li class="list-group-item">{{ capitalizeFirstLetter usage }}: {{ value }}</li>
+              {{/each}}
+            </ul>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </script>
+
   <script src="./scripts/index.js"></script>
 </body>
 </html>
