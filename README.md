@@ -22,9 +22,9 @@ Current tech stack:
 
 1. Clone the repository by copy-pasting the following command into your terminal:
 
-  `
+  ```
   git clone https://github.com/skibinska/HealthForge-Coding-Quiz.git && cd HealthForge-Coding-Quiz
-  `
+  ```
   
 2. Install the required dependencies: `npm install`
 
