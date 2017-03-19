@@ -22,15 +22,15 @@ Current tech stack:
 
 1. Clone the repository by copy-pasting the following command into your terminal:
 
-  ``
+  ```
+  git clone https://github.com/skibinska/HealthForge-Coding-Quiz.git && HealthForge-Coding-Quiz
+  ```
   
-2. Install the required dependencies:
-
-   `npm install`
+2. Install the required dependencies: `npm install`
 
 3. View website: 
    
-  - Run a simple, command-line [http server](https://www.npmjs.com/package/http-server)
+  - Run a simple, command-line [http server](https://www.npmjs.com/package/http-server): `http-server`
    
    - Navigate to: `http://localhost:8080`
 
