@@ -101,7 +101,8 @@
           </div>
 
           <div class="modal-body">
-            <ul class="list-group"><b>Identifiers: </b>
+            <ul class="list-group">
+              <span class="modal-body__header">Identifiers</span>
               {{#each identifiers }}
               <li class="list-group-item"> {{ capitalizeFirstLetter usage }}
                 <ul class="list-group">
@@ -111,7 +112,8 @@
               </li>
               {{/each}}
             </ul>
-            <ul class="list-group"><b>Adress: </b>
+            <ul class="list-group">
+              <span class="modal-body__header">Adress</span>
               {{#each addresses }}
               <li class="list-group-item"> {{ capitalizeFirstLetter usage }}
                 <ul class="list-group">
@@ -122,7 +124,8 @@
               </li>
               {{/each}}
             </ul>
-            <ul class="list-group"><b>Phone number: </b>
+            <ul class="list-group">
+              <span class="modal-body__header">Phone number</span>
               {{#each telecoms }}
               <li class="list-group-item">{{ capitalizeFirstLetter usage }}: {{ value }}</li>
               {{/each}}

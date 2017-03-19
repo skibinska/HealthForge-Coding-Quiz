@@ -5861,4 +5861,8 @@ button.close {
   .modal li:hover {
     background-color: #eee; }
 
+.modal-body__header {
+  font-weight: bold;
+  font-size: 1.7rem; }
+
 /*# sourceMappingURL=main.css.map */
