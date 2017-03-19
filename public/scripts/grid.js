@@ -1,9 +1,6 @@
 (function (window) {
   'use strict';
   var Grid = function (apiUrl) {
-    // this.lastName = null;
-    // this.firstName = null;
-    // this.zipCode = null;
     this.apiUrl = apiUrl;
     this.filters = {};
     this.sortFilter = null;
