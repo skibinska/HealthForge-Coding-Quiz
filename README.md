@@ -14,7 +14,8 @@ The patient list have the following features:
 
 Current tech stack:
 
-- HTML5, Sass
+- HTML5
+- Sass
 - Bootstrap
 - vanilla JavaScript
 - Handlebars.js
