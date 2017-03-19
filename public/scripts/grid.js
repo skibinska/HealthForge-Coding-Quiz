@@ -48,7 +48,7 @@
       qs += '&order=' + encodeURIComponent(this.sortFilter + ' ' + this.sortOrder);
     }
 
-    console.log(qs);
+    // console.log(qs);
     return qs;
   };
 
@@ -62,7 +62,7 @@
         var response = JSON.parse(xhr.responseText);
         _this.collection = response.content;
         resolve(_this.collection);
-        console.log(_this.collection);
+        // console.log(_this.collection);
       }
     });
 

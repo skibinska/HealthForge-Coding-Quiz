@@ -35,8 +35,43 @@
     .then(function(patients){
       patients.forEach(function (patient) {
         showPatients(patient);
+        addDetailsBtnsClickListeners();
       });
     });
+  }
+
+  function addDetailsBtnsClickListeners(){
+    var detailsBtns = document.getElementsByClassName('btn--detail');
+    for(var i = 0; i < detailsBtns.length; i++){
+      var detailsBtn = detailsBtns[i];
+      detailsBtn.addEventListener('click', patientDetailsHandler);
+    }
+  }
+
+  function patientDetailsHandler(mouseEvent){
+    var identifier = mouseEvent.target.dataset.identifier;
+    var patient = findPatientByIdentifier(identifier);
+    showPatientDetailsModal(patient);
+  }
+
+  function findPatientByIdentifier(identifier){
+    var patient = null;
+    for(var i = 0; i <= grid.collection.length; i++){
+      var currentPatient = grid.collection[i];
+      if(currentPatient['identifiers'][0].value === identifier){
+        patient = currentPatient;
+        break;
+      }
+    }
+    return patient;
+  }
+
+  function showPatientDetailsModal(patient){
+    var source = document.getElementById('patientModal').innerHTML;
+    var template = Handlebars.compile(source);
+
+    document.getElementById('detailsModalContainer').innerHTML = template(patient);
+    $('#modal').modal();
   }
 
   function emptyTable () {
@@ -65,6 +100,7 @@
     var source = document.getElementById('patientsTable').innerHTML;
     var template = Handlebars.compile(source);
     var output = template(patient);
+    //console.log(output);
     return output;
   }
 
