@@ -1,2 +1,38 @@
 # HealthForge-Coding-Quiz
 Technical test for HealthForge
+
+# What?
+ An application that uses the HealthForge Patient API and displays a list of patients.
+ 
+The patient list have the following features:
+
+- Display a list of patients with header columns
+- Clicking on a patient in the list should display that patient's details
+- Filtering by first name, last name and zip code
+
+# How?
+
+## Current tech stack
+
+- HTML5, Sass
+- Bootstrap
+- vanilla JavaScript
+
+# Setup
+
+1. Clone the repository by copy-pasting the following command into your terminal:
+
+  ``
+  
+2. Install the required dependencies:
+
+   `npm install`
+
+3. View website: 
+   
+  - Run a simple, command-line [http server](https://www.npmjs.com/package/http-server)
+   
+   - Navigate to: `http://localhost:8080`
+
+
+
