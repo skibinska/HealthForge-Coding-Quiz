@@ -107,10 +107,5 @@
   function showPatients (patient) {
     table.innerHTML += createPatientHTML(patient);
   }
-
-  // function checkData (data) {
-  //   if (!data) return '-';
-  //   return data;
-  // }
-
+  
 })(window);
