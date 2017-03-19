@@ -1,0 +1,43 @@
+.table
+{
+  display: table;
+  margin-top: 30px;
+}
+
+.table__row
+{
+  display: table-row;
+  width: 100%;
+
+  &.result:hover
+  {
+    background-color: #eee;
+  }
+}
+
+.table__header
+{
+  display: table-cell;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 20px;
+  border-bottom: 1px solid #3370b4;
+}
+
+.table__cell
+{
+  display: table-cell;
+  padding: 20px;
+  font-size: 1.7rem;
+  border-bottom: 1px solid #eee;
+}
+
+.hidden
+{
+  display: none;
+}
+
+.details__info
+{
+  display: table-row;
+}
