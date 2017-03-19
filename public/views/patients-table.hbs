@@ -1,0 +1,14 @@
+<script id="patientsTable" type="text/x-handlebars-template">
+
+  <div class="table__row result">
+    <div class="table__cell"> {{ firstName }} </div>
+    <div class="table__cell"> {{ lastName }} </div>
+    <div class="table__cell"> {{ gender }} </div>
+    <div class="table__cell"> {{ formatDate dateOfBirth }} </div>
+    <div class="table__cell"> {{ formatDate dateOfDeath }} </div>
+    <div class="table__cell">
+      <button class="btn btn-default btn--detail" data-toggle="modal" data-target="#modal">Details</button>
+    </div>
+  </div>
+
+</script>
