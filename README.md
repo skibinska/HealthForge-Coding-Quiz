@@ -7,7 +7,7 @@ Technical test for HealthForge
 The patient list have the following features:
 
 - Display a list of patients with header columns
-- Clicking on a patient detail button display that patient's details
+- Clicking on a patient details button display that patient's details
 - Filtering by first name, last name and zip code
 
 ## How?
